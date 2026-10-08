@@ -1,0 +1,24 @@
+:root { --bg:#fff; --fg:#14171a; --muted:#5b6670; --line:#d0d7de; --bad:#b42318; --ok:#067647; --warn:#8a5a00; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0f1419; --fg:#e7e9ea; --muted:#9aa5b1; --line:#2f3942; --bad:#ff8a80; --ok:#6fdc9a; --warn:#f5c26b; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.5 system-ui, sans-serif; }
+main { max-width: 760px; margin: 0 auto; padding: 16px; }
+textarea { width:100%; font:inherit; padding:10px; border:1px solid var(--line); border-radius:8px; background:transparent; color:inherit; }
+input[type=number] { width:80px; font:inherit; padding:4px; background:transparent; color:inherit; border:1px solid var(--line); border-radius:6px; }
+button { font:inherit; padding:8px 14px; border:1px solid var(--line); border-radius:8px; background:transparent; color:inherit; cursor:pointer; min-height:40px; }
+:focus-visible { outline: 3px solid #1d9bf0; outline-offset: 2px; }
+.controls { display:flex; flex-wrap:wrap; gap:12px 20px; align-items:center; margin:12px 0; }
+fieldset { border:1px solid var(--line); border-radius:8px; }
+.inline { display:inline-flex; gap:6px; align-items:center; margin-right:10px; }
+.muted { color:var(--muted); } .status { font-weight:600; }
+.warn { color:var(--warn); } .row { display:flex; justify-content:space-between; align-items:center; }
+.cols { display:grid; grid-template-columns:1fr 1fr; gap:12px; } @media (max-width:600px){ .cols{grid-template-columns:1fr;} }
+.box { white-space:pre-wrap; border:1px solid var(--line); border-radius:8px; padding:10px; margin:0; }
+.posts { list-style:none; padding:0; display:grid; gap:10px; }
+.post { border:1px solid var(--line); border-radius:10px; padding:12px; } .post.bad { border-color:var(--bad); }
+.post-text { white-space:pre-wrap; margin:0 0 8px; overflow-wrap:anywhere; }
+.post-foot { display:flex; justify-content:space-between; align-items:center; gap:8px; color:var(--ok); font-size:14px; }
+.post.bad .post-foot { color:var(--bad); }
+.copybar { display:flex; flex-wrap:wrap; gap:10px 14px; align-items:center; margin:8px 0 12px; position:sticky; top:0; background:var(--bg); padding:8px 0; }
+button.primary { background:#1d9bf0; border-color:#1d9bf0; color:#fff; font-weight:600; }
+.post.done { opacity:.6; } .post.next { border-color:#1d9bf0; border-width:2px; }
